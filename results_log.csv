@@ -1,0 +1,3 @@
+TestID,Date,AITool,AIModelVersion,BenchmarkTask,TimeToWorkingMin,IterationsToFix,CodeQuality,UnityPractices,Maintainability,ArchConsistency,ErrorRisk,Intervention,Total,UnitySpecificIssues,NotablePatterns,FilesGenerated
+FL-001,2025-02-05,Cursor AI,(default),Flashlight System,TBD,0,18,18,18,14,14,8,90,None,"Component separation; null-safe audio","FlashlightBattery.cs; FlashlightController.cs; FlashlightUI.cs"
+FL-002,,(User: run with second AI tool),,Flashlight System,,,,,,,,,,,
