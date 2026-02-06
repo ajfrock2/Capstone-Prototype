@@ -1,2 +1,2 @@
 TestID,Date,AITool,AIModelVersion,BenchmarkTask,TimeToWorkingMin,IterationsToFix,CodeQuality,UnityPractices,Maintainability,ArchConsistency,ErrorRisk,Intervention,Total,UnitySpecificIssues,NotablePatterns,FilesGenerated
-FL-001,,(User: run with first AI tool),,Flashlight System,,,,,,,,,,,
+FL-001,02/05/2026,Cursor Auto AI,,Flashlight System,30,2,17,12,18,15,15,2,79,"Insisted on using old input system; one setup instruction was missing/unclear","Used GetComponent<> frequently","FlashlightController.cs; BatteryManager.cs; FlashlightUI.cs"

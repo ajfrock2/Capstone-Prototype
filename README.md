@@ -22,9 +22,8 @@ The Unity project is located at `Prototype-Of-Capstone/`. Its `Assets` folder is
 ```
 Prototype-Of-Capstone/Assets/
 ├── Scripts/
-│   ├── BenchmarkTasks/
-│   │   └── FlashlightSystem/    (empty — AI will populate during first run)
-│   └── Core/                    (baseline utilities if needed)
+│   └── BenchmarkTasks/
+│       └── FlashlightSystem/    (empty for baseline runs; contains implementation after FL-001)
 ├── Scenes/
 │   └── BenchmarkScene.unity
 ├── Prefabs/
@@ -35,15 +34,9 @@ Prototype-Of-Capstone/Assets/
 
 `BenchmarkScene.unity` is included in `Prototype-Of-Capstone/Assets/Scenes/` with Ground, Player, Main Camera, and Directional Light. No setup required.
 
-### 4. Baseline (ready for first AI run)
+### 4. Baseline State
 
-The project is in baseline state:
-
-- **No existing gameplay code** — AI starts from scratch
-- **Clean hierarchy** — Only: Main Camera, Directional Light, Plane (Ground), Capsule (Player)
-- **Empty FlashlightSystem folder** — Ready for the first AI benchmark run
-
-For subsequent runs, reset to baseline by deleting the scripts in FlashlightSystem before starting.
+This prototype includes the completed FL-001 implementation (Flashlight System) in `FlashlightSystem/`. For subsequent benchmark runs with other AI tools, reset to baseline by deleting the scripts in `FlashlightSystem/` before starting.
 
 ## Benchmark Tasks
 

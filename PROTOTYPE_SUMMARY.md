@@ -2,7 +2,7 @@
 
 **Capstone**: Agentic Coding Technique Evaluation  
 **Student**: Austin Frock  
-**Date**: February 2025
+**Date**: February 2026
 
 ---
 
@@ -20,7 +20,7 @@ The prototype is a **working Unity AI evaluation harness**—a mini benchmark la
 | Standardized workflow | `WORKFLOW.md` | Complete |
 | Scoring rubric | `RUBRIC.md` | Complete |
 | Results log | `RESULTS_LOG.md`, `results_log.csv` | Complete |
-| First AI run | User to complete (see `TEST_RUNS/FL-001_INSTRUCTIONS.md`) | Pending |
+| First AI run (FL-001) | Cursor Auto AI — see `TEST_RUNS/` | Complete |
 
 ---
 
@@ -75,12 +75,9 @@ This task exercises Unity components, input, UI, audio, and configuration—reve
 
 ---
 
-## Screenshots
+## Screenshots / Video
 
-*(Add screenshots here after running in Unity:)*
-- Screenshot 1: Unity project hierarchy with flashlight setup
-- Screenshot 2: Game view with flashlight on and battery UI
-- Screenshot 3: Inspector showing FlashlightController configuration
+See `TEST_RUNS/FL-001_VIDEOSHOWCASE.mp4` for a video demonstration of the flashlight system in action (toggle, battery drain/recharge, UI, Debug.Log feedback).
 
 ---
 
@@ -97,7 +94,7 @@ The prototype demonstrates that the system produces structured, comparable data�
 
 ## Next Steps for Full Study
 
-1. Complete FL-001 with a first AI tool (Cursor, GPT, Claude, Gemini, or Codex)
+1. Run additional AI tools (GPT, Claude, Gemini, Codex) with the Flashlight System benchmark
 2. Add 1–2 more benchmark tasks
 3. Run each task with all 5 AI tools (Cursor, GPT, Claude, Gemini, Codex)
 4. Aggregate results; draw conclusions about agentic workflow effectiveness
