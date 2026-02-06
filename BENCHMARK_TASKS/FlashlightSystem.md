@@ -53,6 +53,8 @@ This task is designed to reveal AI strengths and weaknesses in:
 
 ## Technical Constraints
 
+The project uses URP (Universal Render Pipeline); Light and UI components work as in Built-in RP.
+
 ### Required Unity Components
 - **Light** (Spot or Point)
 - **AudioSource**

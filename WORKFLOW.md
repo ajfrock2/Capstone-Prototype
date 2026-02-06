@@ -6,7 +6,7 @@ This document defines the exact procedure to follow for every AI benchmark test 
 
 ## Pre-Run Checklist
 
-- [ ] Unity project reset to baseline (no benchmark scripts in FlashlightSystem folder)
+- [ ] Unity project at baseline (FlashlightSystem folder empty; for subsequent runs, delete scripts in `Prototype-Of-Capstone/Assets/Scripts/BenchmarkTasks/FlashlightSystem/` first)
 - [ ] Benchmark task specification ready (FlashlightSystem.md)
 - [ ] Results log template ready
 - [ ] Timer ready for tracking time to working solution
@@ -44,10 +44,10 @@ A2: [Your answer]
 **Purpose**: Give the AI full context about the project state and constraints.
 
 **Procedure**:
-1. Provide the Unity project structure:
+1. Provide the Unity project structure (under `Prototype-Of-Capstone/`):
    ```
-   Assets/
-   ├── Scripts/BenchmarkTasks/FlashlightSystem/  (empty)
+   Prototype-Of-Capstone/Assets/
+   ├── Scripts/BenchmarkTasks/FlashlightSystem/  (empty for baseline runs)
    ├── Scenes/BenchmarkScene.unity
    ├── Prefabs/
    └── Materials/
@@ -56,8 +56,8 @@ A2: [Your answer]
    - Main Camera, Directional Light, Ground (Plane), Player (Capsule at 0,1,0)
    - No existing gameplay scripts
 3. State constraints:
-   - Unity 2022 LTS (or latest LTS)
-   - Built-in Render Pipeline
+   - Unity 6 (6000.x LTS)
+   - URP (Universal Render Pipeline)
    - Target: Windows standalone
    - Input: Legacy Input Manager (unless AI specifies otherwise)
 4. Provide links if relevant:

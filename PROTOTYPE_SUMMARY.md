@@ -14,14 +14,13 @@ The prototype is a **working Unity AI evaluation harness**—a mini benchmark la
 
 | Component | Location | Status |
 |-----------|----------|--------|
-| Unity benchmark testbed | `UnityBenchmarkTestbed/` | Complete |
-| Baseline scene | `Assets/Scenes/BenchmarkScene.unity` | Complete |
+| Unity benchmark testbed | `Prototype-Of-Capstone/` | Complete |
+| Baseline scene | `Prototype-Of-Capstone/Assets/Scenes/BenchmarkScene.unity` | Complete |
 | Flashlight benchmark task spec | `BENCHMARK_TASKS/FlashlightSystem.md` | Complete |
 | Standardized workflow | `WORKFLOW.md` | Complete |
 | Scoring rubric | `RUBRIC.md` | Complete |
 | Results log | `RESULTS_LOG.md`, `results_log.csv` | Complete |
-| Proof-of-concept run (Cursor) | `TEST_RUNS/FL-001_Cursor.md` | Complete |
-| Second AI run | User to complete (see `TEST_RUNS/FL-002_INSTRUCTIONS.md`) | Pending |
+| First AI run | User to complete (see `TEST_RUNS/FL-001_INSTRUCTIONS.md`) | Pending |
 
 ---
 
@@ -76,45 +75,6 @@ This task exercises Unity components, input, UI, audio, and configuration—reve
 
 ---
 
-## Proof-of-Concept: Cursor AI (FL-001)
-
-### Implementation
-
-**Files created**:
-- `FlashlightBattery.cs` — Battery state, depletion, recharge, thresholds
-- `FlashlightController.cs` — Input, light toggle, audio coordination
-- `FlashlightUI.cs` — Battery bar/text display
-
-**Design**:
-- Component-based: Battery, Controller, UI separated
-- No magic numbers: All tunables in serialized fields with `[Range]` and `[Tooltip]`
-- Null-safe audio: Graceful behavior when clips are not assigned
-- Inspector-friendly: Easy to tune in Unity Editor
-
-### Code Example (FlashlightController — null-safe audio)
-
-```csharp
-private void PlaySound(AudioClip clip)
-{
-    if (_audioSource != null && clip != null)
-        _audioSource.PlayOneShot(clip);
-}
-```
-
-### Rubric Scores (FL-001)
-
-| Category | Score |
-|----------|-------|
-| Code Quality | 18/20 |
-| Unity Best Practices | 18/20 |
-| Maintainability | 18/20 |
-| Architectural Consistency | 14/15 |
-| Error Accumulation Risk | 14/15 |
-| Developer Intervention Required | 8/10 |
-| **Total** | **90/100** |
-
----
-
 ## Screenshots
 
 *(Add screenshots here after running in Unity:)*
@@ -137,7 +97,7 @@ The prototype demonstrates that the system produces structured, comparable data�
 
 ## Next Steps for Full Study
 
-1. Complete FL-002 with a second AI tool (GPT, Claude, Gemini, or Codex)
+1. Complete FL-001 with a first AI tool (Cursor, GPT, Claude, Gemini, or Codex)
 2. Add 1–2 more benchmark tasks
 3. Run each task with all 5 AI tools (Cursor, GPT, Claude, Gemini, Codex)
 4. Aggregate results; draw conclusions about agentic workflow effectiveness

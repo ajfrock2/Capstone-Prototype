@@ -10,8 +10,7 @@ Record one row per test run. Use the rubric (`RUBRIC.md`) for scoring. Keep entr
 
 | Test ID | Date | AI Tool | AI Model/Version | Benchmark Task | Time to Working (min) | Iterations to Fix | Code Quality /20 | Unity Practices /20 | Maintainability /20 | Arch. Consistency /15 | Error Risk /15 | Intervention /10 | Total /100 | Unity-Specific Issues | Notable Patterns | Files Generated |
 |---------|------|---------|------------------|----------------|------------------------|-------------------|------------------|---------------------|---------------------|------------------------|----------------|------------------|------------|----------------------|------------------|-----------------|
-| FL-001 | 2025-02-05 | Cursor AI | (default) | Flashlight System | TBD | 0 | 18 | 18 | 18 | 14 | 14 | 8 | 90 | None | Component separation, null-safe audio | FlashlightBattery, FlashlightController, FlashlightUI |
-| FL-002 | | *(User: run with GPT/Claude/Gemini/Codex)* | | Flashlight System | | | | | | | | | | | | |
+| FL-001 | | *(User: run with first AI tool)* | | Flashlight System | | | | | | | | | | | | |
 
 ---
 
@@ -38,12 +37,6 @@ Record one row per test run. Use the rubric (`RUBRIC.md`) for scoring. Keep entr
 - Arch. Consistency: 
 - Error Risk: 
 - Intervention: 
-
----
-
-### FL-002 — [AI Tool] — [Date]
-
-*(Same structure as above)*
 
 ---
 
