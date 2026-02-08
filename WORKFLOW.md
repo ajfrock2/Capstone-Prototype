@@ -97,7 +97,7 @@ Approved Plan:
 **Purpose**: AI generates code; you integrate it into the project.
 
 **Procedure**:
-1. Ask the AI to generate the implementation (scripts, prefab setup instructions).
+1. Ask the AI to gen erate the implementation (scripts, prefab setup instructions).
 2. Create/copy files into the Unity project as instructed.
 3. Perform any manual setup in Unity (adding components to GameObjects, creating UI, etc.) as the AI directs.
 4. Document:
