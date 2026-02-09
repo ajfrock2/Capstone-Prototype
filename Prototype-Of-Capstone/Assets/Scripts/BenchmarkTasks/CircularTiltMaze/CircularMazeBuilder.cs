@@ -43,55 +43,55 @@ namespace BenchmarkTasks.CircularTiltMaze
         [Header("Layout - Ring Arcs")]
         [SerializeField] private RingArc[] ringArcs = new RingArc[]
         {
-            // R1 (gap 18°–42°)
-            new RingArc { name = "R1_A", radius = 2.0f, startAngleDeg = 42f, endAngleDeg = 360f, thickness = 0.70f, depth = 0.30f, segmentLength = 0.6f },
-            new RingArc { name = "R1_B", radius = 2.0f, startAngleDeg = 0f, endAngleDeg = 18f, thickness = 0.70f, depth = 0.30f, segmentLength = 0.6f },
+            // R1 (gap 8°–32°)
+            new RingArc { name = "R1_A", radius = 2.0f, startAngleDeg = 32f, endAngleDeg = 360f, thickness = 0.70f, depth = 0.30f, segmentLength = 0.6f },
+            new RingArc { name = "R1_B", radius = 2.0f, startAngleDeg = 0f, endAngleDeg = 8f, thickness = 0.70f, depth = 0.30f, segmentLength = 0.6f },
 
-            // R2 (gap 108°–132°)
-            new RingArc { name = "R2_A", radius = 4.0f, startAngleDeg = 132f, endAngleDeg = 360f, thickness = 0.70f, depth = 0.30f, segmentLength = 0.8f },
-            new RingArc { name = "R2_B", radius = 4.0f, startAngleDeg = 0f, endAngleDeg = 108f, thickness = 0.70f, depth = 0.30f, segmentLength = 0.8f },
+            // R2 (gap 188°–212°)
+            new RingArc { name = "R2_A", radius = 4.0f, startAngleDeg = 212f, endAngleDeg = 360f, thickness = 0.70f, depth = 0.30f, segmentLength = 0.8f },
+            new RingArc { name = "R2_B", radius = 4.0f, startAngleDeg = 0f, endAngleDeg = 188f, thickness = 0.70f, depth = 0.30f, segmentLength = 0.8f },
 
-            // R3 (gap 198°–222°)
-            new RingArc { name = "R3_A", radius = 6.4f, startAngleDeg = 222f, endAngleDeg = 360f, thickness = 0.70f, depth = 0.30f, segmentLength = 1.0f },
-            new RingArc { name = "R3_B", radius = 6.4f, startAngleDeg = 0f, endAngleDeg = 198f, thickness = 0.70f, depth = 0.30f, segmentLength = 1.0f },
+            // R3 (gap 58°–82°)
+            new RingArc { name = "R3_A", radius = 6.4f, startAngleDeg = 82f, endAngleDeg = 360f, thickness = 0.70f, depth = 0.30f, segmentLength = 1.0f },
+            new RingArc { name = "R3_B", radius = 6.4f, startAngleDeg = 0f, endAngleDeg = 58f, thickness = 0.70f, depth = 0.30f, segmentLength = 1.0f },
 
-            // R4 (gap 288°–312°)
-            new RingArc { name = "R4_A", radius = 9.2f, startAngleDeg = 312f, endAngleDeg = 360f, thickness = 0.70f, depth = 0.30f, segmentLength = 1.2f },
-            new RingArc { name = "R4_B", radius = 9.2f, startAngleDeg = 0f, endAngleDeg = 288f, thickness = 0.70f, depth = 0.30f, segmentLength = 1.2f },
+            // R4 (gap 238°–262°)
+            new RingArc { name = "R4_A", radius = 9.2f, startAngleDeg = 262f, endAngleDeg = 360f, thickness = 0.70f, depth = 0.30f, segmentLength = 1.2f },
+            new RingArc { name = "R4_B", radius = 9.2f, startAngleDeg = 0f, endAngleDeg = 238f, thickness = 0.70f, depth = 0.30f, segmentLength = 1.2f },
 
-            // R5 (gap 18°–42°)
-            new RingArc { name = "R5_A", radius = 12.4f, startAngleDeg = 42f, endAngleDeg = 360f, thickness = 0.70f, depth = 0.30f, segmentLength = 1.4f },
-            new RingArc { name = "R5_B", radius = 12.4f, startAngleDeg = 0f, endAngleDeg = 18f, thickness = 0.70f, depth = 0.30f, segmentLength = 1.4f },
+            // R5 (gap 118°–142°)
+            new RingArc { name = "R5_A", radius = 12.4f, startAngleDeg = 142f, endAngleDeg = 360f, thickness = 0.70f, depth = 0.30f, segmentLength = 1.4f },
+            new RingArc { name = "R5_B", radius = 12.4f, startAngleDeg = 0f, endAngleDeg = 118f, thickness = 0.70f, depth = 0.30f, segmentLength = 1.4f },
 
-            // R6 (gap 128°–152°)
-            new RingArc { name = "R6_A", radius = 16.0f, startAngleDeg = 152f, endAngleDeg = 360f, thickness = 0.70f, depth = 0.30f, segmentLength = 1.6f },
-            new RingArc { name = "R6_B", radius = 16.0f, startAngleDeg = 0f, endAngleDeg = 128f, thickness = 0.70f, depth = 0.30f, segmentLength = 1.6f },
+            // R6 (gap 288°–312°)
+            new RingArc { name = "R6_A", radius = 16.0f, startAngleDeg = 312f, endAngleDeg = 360f, thickness = 0.70f, depth = 0.30f, segmentLength = 1.6f },
+            new RingArc { name = "R6_B", radius = 16.0f, startAngleDeg = 0f, endAngleDeg = 288f, thickness = 0.70f, depth = 0.30f, segmentLength = 1.6f },
 
-            // R7 outer wall (exit gap 236°–264°)
-            new RingArc { name = "R7_A", radius = 20.0f, startAngleDeg = 264f, endAngleDeg = 360f, thickness = 0.70f, depth = 0.30f, segmentLength = 1.8f },
-            new RingArc { name = "R7_B", radius = 20.0f, startAngleDeg = 0f, endAngleDeg = 236f, thickness = 0.70f, depth = 0.30f, segmentLength = 1.8f },
+            // R7 outer wall (exit gap 96°–124°)
+            new RingArc { name = "R7_A", radius = 20.0f, startAngleDeg = 124f, endAngleDeg = 360f, thickness = 0.70f, depth = 0.30f, segmentLength = 1.8f },
+            new RingArc { name = "R7_B", radius = 20.0f, startAngleDeg = 0f, endAngleDeg = 96f, thickness = 0.70f, depth = 0.30f, segmentLength = 1.8f },
         };
 
         [Header("Layout - Radial Walls")]
         [SerializeField] private RadialWall[] radialWalls = new RadialWall[]
         {
-            new RadialWall { name = "Wall_A", angleDeg = 200f, innerRadius = 2.2f, outerRadius = 3.8f, thickness = 0.70f, depth = 0.30f },
-            new RadialWall { name = "Wall_B", angleDeg = 300f, innerRadius = 2.2f, outerRadius = 3.8f, thickness = 0.70f, depth = 0.30f },
-            new RadialWall { name = "Wall_C", angleDeg = 20f,  innerRadius = 4.2f, outerRadius = 6.0f, thickness = 0.70f, depth = 0.30f },
-            new RadialWall { name = "Wall_D", angleDeg = 330f, innerRadius = 4.2f, outerRadius = 6.0f, thickness = 0.70f, depth = 0.30f },
-            new RadialWall { name = "Wall_E", angleDeg = 60f,  innerRadius = 6.6f, outerRadius = 8.8f, thickness = 0.70f, depth = 0.30f },
-            new RadialWall { name = "Wall_F", angleDeg = 150f, innerRadius = 6.6f, outerRadius = 8.8f, thickness = 0.70f, depth = 0.30f },
-            new RadialWall { name = "Wall_G", angleDeg = 90f,  innerRadius = 9.6f, outerRadius = 12.0f, thickness = 0.70f, depth = 0.30f },
-            new RadialWall { name = "Wall_H", angleDeg = 180f, innerRadius = 9.6f, outerRadius = 12.0f, thickness = 0.70f, depth = 0.30f },
-            new RadialWall { name = "Wall_I", angleDeg = 200f, innerRadius = 12.4f, outerRadius = 16.0f, thickness = 0.70f, depth = 0.30f },
-            new RadialWall { name = "Wall_J", angleDeg = 310f, innerRadius = 12.4f, outerRadius = 16.0f, thickness = 0.70f, depth = 0.30f },
-            new RadialWall { name = "Wall_K", angleDeg = 20f,  innerRadius = 16.4f, outerRadius = 20.0f, thickness = 0.70f, depth = 0.30f },
+            new RadialWall { name = "Wall_A", angleDeg = 220f, innerRadius = 2.2f, outerRadius = 3.8f, thickness = 0.70f, depth = 0.30f },
+            new RadialWall { name = "Wall_B", angleDeg = 350f, innerRadius = 2.2f, outerRadius = 3.8f, thickness = 0.70f, depth = 0.30f },
+            new RadialWall { name = "Wall_C", angleDeg = 40f,  innerRadius = 4.2f, outerRadius = 6.0f, thickness = 0.70f, depth = 0.30f },
+            new RadialWall { name = "Wall_D", angleDeg = 220f, innerRadius = 4.2f, outerRadius = 6.0f, thickness = 0.70f, depth = 0.30f },
+            new RadialWall { name = "Wall_E", angleDeg = 40f,  innerRadius = 6.6f, outerRadius = 8.8f, thickness = 0.70f, depth = 0.30f },
+            new RadialWall { name = "Wall_F", angleDeg = 300f, innerRadius = 6.6f, outerRadius = 8.8f, thickness = 0.70f, depth = 0.30f },
+            new RadialWall { name = "Wall_G", angleDeg = 100f, innerRadius = 9.6f, outerRadius = 12.0f, thickness = 0.70f, depth = 0.30f },
+            new RadialWall { name = "Wall_H", angleDeg = 280f, innerRadius = 9.6f, outerRadius = 12.0f, thickness = 0.70f, depth = 0.30f },
+            new RadialWall { name = "Wall_I", angleDeg = 90f,  innerRadius = 12.4f, outerRadius = 16.0f, thickness = 0.70f, depth = 0.30f },
+            new RadialWall { name = "Wall_J", angleDeg = 340f, innerRadius = 12.4f, outerRadius = 16.0f, thickness = 0.70f, depth = 0.30f },
+            new RadialWall { name = "Wall_K", angleDeg = 80f,  innerRadius = 16.4f, outerRadius = 20.0f, thickness = 0.70f, depth = 0.30f },
             new RadialWall { name = "Wall_L", angleDeg = 320f, innerRadius = 16.4f, outerRadius = 20.0f, thickness = 0.70f, depth = 0.30f },
         };
 
         [Header("Exit Trigger (Optional)")]
         [SerializeField] private Transform exitTrigger;
-        [SerializeField] private float exitAngleDeg = 250f;
+        [SerializeField] private float exitAngleDeg = 110f;
         [SerializeField] private float exitRadius = 20.0f;
         [SerializeField] private Vector3 exitTriggerSize = new Vector3(2.0f, 0.7f, 0.6f);
 
@@ -270,4 +270,3 @@ namespace BenchmarkTasks.CircularTiltMaze
         }
     }
 }
-

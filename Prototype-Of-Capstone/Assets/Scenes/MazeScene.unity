@@ -290,7 +290,7 @@ MonoBehaviour:
   ringArcs:
   - name: R1_A
     radius: 2
-    startAngleDeg: 42
+    startAngleDeg: 32
     endAngleDeg: 360
     thickness: 0.7
     depth: 0.3
@@ -298,13 +298,13 @@ MonoBehaviour:
   - name: R1_B
     radius: 2
     startAngleDeg: 0
-    endAngleDeg: 18
+    endAngleDeg: 8
     thickness: 0.7
     depth: 0.3
     segmentLength: 0.6
   - name: R2_A
     radius: 4
-    startAngleDeg: 132
+    startAngleDeg: 212
     endAngleDeg: 360
     thickness: 0.7
     depth: 0.3
@@ -312,13 +312,13 @@ MonoBehaviour:
   - name: R2_B
     radius: 4
     startAngleDeg: 0
-    endAngleDeg: 108
+    endAngleDeg: 188
     thickness: 0.7
     depth: 0.3
     segmentLength: 0.8
   - name: R3_A
     radius: 6.4
-    startAngleDeg: 222
+    startAngleDeg: 82
     endAngleDeg: 360
     thickness: 0.7
     depth: 0.3
@@ -326,13 +326,13 @@ MonoBehaviour:
   - name: R3_B
     radius: 6.4
     startAngleDeg: 0
-    endAngleDeg: 198
+    endAngleDeg: 58
     thickness: 0.7
     depth: 0.3
     segmentLength: 1
   - name: R4_A
     radius: 9.2
-    startAngleDeg: 312
+    startAngleDeg: 262
     endAngleDeg: 360
     thickness: 0.7
     depth: 0.3
@@ -340,13 +340,13 @@ MonoBehaviour:
   - name: R4_B
     radius: 9.2
     startAngleDeg: 0
-    endAngleDeg: 288
+    endAngleDeg: 238
     thickness: 0.7
     depth: 0.3
     segmentLength: 1.2
   - name: R5_A
     radius: 12.4
-    startAngleDeg: 42
+    startAngleDeg: 142
     endAngleDeg: 360
     thickness: 0.7
     depth: 0.3
@@ -354,13 +354,13 @@ MonoBehaviour:
   - name: R5_B
     radius: 12.4
     startAngleDeg: 0
-    endAngleDeg: 18
+    endAngleDeg: 118
     thickness: 0.7
     depth: 0.3
     segmentLength: 1.4
   - name: R6_A
     radius: 16
-    startAngleDeg: 152
+    startAngleDeg: 312
     endAngleDeg: 360
     thickness: 0.7
     depth: 0.3
@@ -368,13 +368,13 @@ MonoBehaviour:
   - name: R6_B
     radius: 16
     startAngleDeg: 0
-    endAngleDeg: 128
+    endAngleDeg: 288
     thickness: 0.7
     depth: 0.3
     segmentLength: 1.6
   - name: R7_A
     radius: 20
-    startAngleDeg: 264
+    startAngleDeg: 124
     endAngleDeg: 360
     thickness: 0.7
     depth: 0.3
@@ -382,73 +382,73 @@ MonoBehaviour:
   - name: R7_B
     radius: 20
     startAngleDeg: 0
-    endAngleDeg: 236
+    endAngleDeg: 96
     thickness: 0.7
     depth: 0.3
     segmentLength: 1.8
   radialWalls:
   - name: Wall_A
-    angleDeg: 200
+    angleDeg: 220
     innerRadius: 2.2
     outerRadius: 3.8
     thickness: 0.7
     depth: 0.3
   - name: Wall_B
-    angleDeg: 300
+    angleDeg: 350
     innerRadius: 2.2
     outerRadius: 3.8
     thickness: 0.7
     depth: 0.3
   - name: Wall_C
-    angleDeg: 20
+    angleDeg: 40
     innerRadius: 4.2
     outerRadius: 6
     thickness: 0.7
     depth: 0.3
   - name: Wall_D
-    angleDeg: 330
+    angleDeg: 220
     innerRadius: 4.2
     outerRadius: 6
     thickness: 0.7
     depth: 0.3
   - name: Wall_E
-    angleDeg: 60
+    angleDeg: 40
     innerRadius: 6.6
     outerRadius: 8.8
     thickness: 0.7
     depth: 0.3
   - name: Wall_F
-    angleDeg: 150
+    angleDeg: 300
     innerRadius: 6.6
     outerRadius: 8.8
     thickness: 0.7
     depth: 0.3
   - name: Wall_G
-    angleDeg: 90
+    angleDeg: 100
     innerRadius: 9.6
     outerRadius: 12
     thickness: 0.7
     depth: 0.3
   - name: Wall_H
-    angleDeg: 180
+    angleDeg: 280
     innerRadius: 9.6
     outerRadius: 12
     thickness: 0.7
     depth: 0.3
   - name: Wall_I
-    angleDeg: 200
+    angleDeg: 90
     innerRadius: 12.4
     outerRadius: 16
     thickness: 0.7
     depth: 0.3
   - name: Wall_J
-    angleDeg: 310
+    angleDeg: 340
     innerRadius: 12.4
     outerRadius: 16
     thickness: 0.7
     depth: 0.3
   - name: Wall_K
-    angleDeg: 20
+    angleDeg: 80
     innerRadius: 16.4
     outerRadius: 20
     thickness: 0.7
@@ -460,7 +460,7 @@ MonoBehaviour:
     thickness: 0.7
     depth: 0.3
   exitTrigger: {fileID: 0}
-  exitAngleDeg: 250
+  exitAngleDeg: 110
   exitRadius: 20
   exitTriggerSize: {x: 2, y: 0.7, z: 0.6}
 --- !u!1 &1085986081
