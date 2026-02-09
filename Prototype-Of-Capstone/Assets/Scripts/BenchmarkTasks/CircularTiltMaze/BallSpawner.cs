@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace BenchmarkTasks.CircularTiltMaze
 {
@@ -9,10 +9,10 @@ namespace BenchmarkTasks.CircularTiltMaze
         [SerializeField] private GameObject ballPrefab;
 
         [Header("Start Position (Maze Local)")]
-        [SerializeField] private Vector3 startLocalPosition = new Vector3(0f, 0.35f, 0f);
+        [SerializeField] private Vector3 startLocalPosition = new Vector3(0f, 0.2f, 0f);
 
         [Header("Ball Settings")]
-        [SerializeField] private float ballRadius = 0.25f;
+        [SerializeField] private float ballRadius = 0.18f;
         [SerializeField] private float ballMass = 1.0f;
         [SerializeField] private float ballDrag = 0.05f;
         [SerializeField] private float ballAngularDrag = 0.05f;
