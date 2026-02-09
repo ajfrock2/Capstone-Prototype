@@ -282,97 +282,94 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BenchmarkTasks.CircularTiltMaze.CircularMazeBuilder
   buildOnStart: 1
   clearExisting: 1
-  mazeRadius: 5
-  mazeDepth: 0.6
-  stopThickness: 0.1
+  mazeRadius: 15
+  mazeDepth: 1.8
+  stopThickness: 0.2
   addFrontBackStops: 1
   stopMaterial: {fileID: 2100000, guid: 7b93ca22576c65b4f9869b090d2ddeeb, type: 2}
   ringArcs:
   - name: Outer_A
-    radius: 5
-    startAngleDeg: 20
-    endAngleDeg: 180
-    thickness: 0.25
-    depth: 0.6
-    segmentLength: 0.5
+    radius: 15
+    startAngleDeg: 330
+    endAngleDeg: 360
+    thickness: 0.3
+    depth: 0.8
+    segmentLength: 1.2
   - name: Outer_B
-    radius: 5
-    startAngleDeg: 180
-    endAngleDeg: 350
-    thickness: 0.25
-    depth: 0.6
-    segmentLength: 0.5
+    radius: 15
+    startAngleDeg: 0
+    endAngleDeg: 300
+    thickness: 0.3
+    depth: 0.8
+    segmentLength: 1.2
   - name: Ring1_A
-    radius: 3.5
-    startAngleDeg: 60
-    endAngleDeg: 180
-    thickness: 0.2
-    depth: 0.5
-    segmentLength: 0.45
-  - name: Ring1_B
-    radius: 3.5
-    startAngleDeg: 180
-    endAngleDeg: 340
-    thickness: 0.2
-    depth: 0.5
-    segmentLength: 0.45
-  - name: Ring2_A
-    radius: 2.2
+    radius: 12
     startAngleDeg: 270
     endAngleDeg: 360
-    thickness: 0.2
-    depth: 0.5
-    segmentLength: 0.4
-  - name: Ring2_B
-    radius: 2.2
+    thickness: 0.26
+    depth: 0.7
+    segmentLength: 1
+  - name: Ring1_B
+    radius: 12
     startAngleDeg: 0
-    endAngleDeg: 230
-    thickness: 0.2
-    depth: 0.5
-    segmentLength: 0.4
+    endAngleDeg: 240
+    thickness: 0.26
+    depth: 0.7
+    segmentLength: 1
+  - name: Ring2_A
+    radius: 9
+    startAngleDeg: 210
+    endAngleDeg: 360
+    thickness: 0.24
+    depth: 0.65
+    segmentLength: 0.9
+  - name: Ring2_B
+    radius: 9
+    startAngleDeg: 0
+    endAngleDeg: 180
+    thickness: 0.24
+    depth: 0.65
+    segmentLength: 0.9
   - name: Ring3_A
-    radius: 1
+    radius: 6.5
     startAngleDeg: 150
     endAngleDeg: 360
-    thickness: 0.2
-    depth: 0.5
-    segmentLength: 0.35
+    thickness: 0.22
+    depth: 0.6
+    segmentLength: 0.8
   - name: Ring3_B
-    radius: 1
+    radius: 6.5
     startAngleDeg: 0
-    endAngleDeg: 110
-    thickness: 0.2
-    depth: 0.5
-    segmentLength: 0.35
-  radialWalls:
-  - name: RW1
-    angleDeg: 60
-    innerRadius: 1
-    outerRadius: 2.2
-    thickness: 0.2
-    depth: 0.5
-  - name: RW2
-    angleDeg: 200
-    innerRadius: 2.2
-    outerRadius: 3.5
-    thickness: 0.2
-    depth: 0.5
-  - name: RW3
-    angleDeg: 300
-    innerRadius: 3.5
-    outerRadius: 5
-    thickness: 0.2
+    endAngleDeg: 120
+    thickness: 0.22
     depth: 0.6
-  - name: RW4
-    angleDeg: 100
-    innerRadius: 3.5
-    outerRadius: 5
+    segmentLength: 0.8
+  - name: Ring4_A
+    radius: 4
+    startAngleDeg: 90
+    endAngleDeg: 360
     thickness: 0.2
-    depth: 0.6
-  exitTrigger: {fileID: 419798510}
-  exitAngleDeg: 5
-  exitRadius: 5
-  exitTriggerSize: {x: 0.6, y: 0.6, z: 0.6}
+    depth: 0.55
+    segmentLength: 0.7
+  - name: Ring4_B
+    radius: 4
+    startAngleDeg: 0
+    endAngleDeg: 60
+    thickness: 0.2
+    depth: 0.55
+    segmentLength: 0.7
+  - name: Ring5_A
+    radius: 2
+    startAngleDeg: 30
+    endAngleDeg: 360
+    thickness: 0.18
+    depth: 0.5
+    segmentLength: 0.6
+  radialWalls: []
+  exitTrigger: {fileID: 0}
+  exitAngleDeg: 315
+  exitRadius: 15
+  exitTriggerSize: {x: 1.2, y: 1.2, z: 1.2}
 --- !u!1 &1085986081
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,7 +819,7 @@ Transform:
   m_GameObject: {fileID: 1930135682}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -9.129}
+  m_LocalPosition: {x: 0, y: 1, z: -30.04}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
