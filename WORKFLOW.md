@@ -1,6 +1,15 @@
 # Standardized Workflow for AI Benchmark Tests
 
-This document defines the exact procedure to follow for every AI benchmark test run. **Consistency is essential** for fair comparisons across AI tools (Cursor, GPT, Claude, Gemini, Codex).
+This document defines the required procedure for every AI benchmark test run. Consistency is essential for fair comparisons across tools (Cursor, GPT, Claude, Gemini, Codex).
+
+---
+
+## Global Rules
+
+- Follow phases in this exact order: 1) AI Interview, 2) Context Onboarding, 3) Planning, 4) Implementation, 5) Testing, 6) Evaluation.
+- Do not advance phases without explicit confirmation that the current phase is complete.
+- Before moving to the next phase, ask: "Are we done with <Current Phase>?"
+- If a deviation is requested (skip/reorder/change), allow it but record it as a deviation for comparability.
 
 ---
 
@@ -18,34 +27,37 @@ This document defines the exact procedure to follow for every AI benchmark test 
 
 ### Step 1: AI Interview Phase
 
-**Purpose**: Allow the AI to ask clarification questions before implementation.
+Purpose: Allow the AI to ask clarification questions before planning and challenge default assumptions.
 
-**Procedure**:
+Procedure:
 1. Present the full benchmark task specification to the AI (paste `BENCHMARK_TASKS/<TaskName>.md` or equivalent).
-2. Ask: *"Do you have any clarification questions before we proceed with planning?"*
-3. Document every question the AI asks and your answer in the format below.
-4. Do not proceed to planning until the AI indicates it has no further questions (or after a reasonable number of exchanges).
+2. Ask exactly: "Do you have any clarification questions before we proceed with planning?"
+3. Require assumption-challenge questions:
+   - Ask the AI to provide at least 3 irregular but viable questions that could change the implementation direction.
+   - Questions should probe hidden constraints, edge cases, tradeoffs, and unconventional approaches.
+   - At least 1 question must suggest an odd but viable solution path.
+4. Document every AI question and your answer.
+5. Do not proceed until the AI indicates there are no further questions (or after a reasonable exchange limit).
+6. Ask checkpoint: "Are we done with AI Interview Phase?"
 
-**Record**:
-```
+Record:
+```text
 Q1: [AI question]
 A1: [Your answer]
 
 Q2: [AI question]
 A2: [Your answer]
-
-...
 ```
 
 ---
 
 ### Step 2: Context Onboarding
 
-**Purpose**: Give the AI full context about the project state and constraints.
+Purpose: Provide full project context and constraints.
 
-**Procedure**:
-1. Provide the Unity project structure (under `Prototype-Of-Capstone/`):
-   ```
+Procedure:
+1. Provide the project structure under `Prototype-Of-Capstone/`:
+   ```text
    Prototype-Of-Capstone/Assets/
    |-- Scripts/BenchmarkTasks/<TaskName>/  (empty for baseline runs)
    |-- Scenes/BenchmarkScene.unity
@@ -60,63 +72,79 @@ A2: [Your answer]
    - URP (Universal Render Pipeline)
    - Target: Windows standalone
    - Input: Legacy Input Manager (unless AI specifies otherwise)
-4. Provide links if relevant:
+4. Provide relevant links if needed:
    - [Unity Light Component](https://docs.unity3d.com/ScriptReference/Light.html)
    - [Unity AudioSource](https://docs.unity3d.com/ScriptReference/AudioSource.html)
    - [Unity UI](https://docs.unity3d.com/Packages/com.unity.ugui@1.0/manual/index.html)
+5. Require directory-structure clarification:
+   - Ask clarifying questions about folders/files that appear unusual, ambiguous, duplicated, or out of expected benchmark layout.
+   - Explicitly mention any noteworthy structure observations before leaving this phase.
+   - If no anomalies are seen, explicitly state that nothing unusual was found.
+6. Ask checkpoint: "Are we done with Context Onboarding?"
 
-**Record**: Note what context you provided. Any deviations from this standard context must be documented.
+Record: Note what context you provided. Document any deviations from this standard context.
 
 ---
 
-### Step 3: Planning Phase (Iterative)
+### Step 3: Planning Phase
 
-**Purpose**: Get a plan-first approach. Review and approve before implementation.
+Purpose: Enforce plan-first implementation with optional parallel subagent exploration.
 
-**Procedure**:
-1. Ask the AI: *"Please create an implementation plan for this benchmark task. Include: (1) components/scripts you will create, (2) how they interact, (3) key design decisions."*
-2. Review the plan for:
-   - Completeness (covers all functional requirements)
-   - Unity best practices (component-based, Inspector-friendly)
-   - No obvious red flags (magic numbers, tight coupling)
-3. Ask follow-up questions if the plan is unclear or incomplete.
-4. Confirm the plan: *"I approve this plan. Please proceed with implementation."*
-5. Document the approved plan (copy or summarize).
+Procedure:
+1. Ask: "Please create an implementation plan for this benchmark task. Include: (1) components/scripts you will create, (2) how they interact, (3) key design decisions."
+2. Recommend subagent-assisted research before locking the plan:
+   - Launch two tracks when possible: (a) 1 conventional track, (b) 1 unorthodox/risky track.
+   - Main agent defines what each track should research.
+   - Run up to 5 subagent pairs at one time (10 subagents total) when needed.
+3. Main agent compares track outputs and selects one winner approach (no mandatory hybrid merge).
+4. Review the winning direction for completeness, Unity best practices, and obvious risks.
+5. Ask follow-ups until the plan is clear and complete.
+6. Require explicit approval gate before implementation:
+   - "I approve this plan. Please proceed with implementation."
+7. Document the approved plan.
+8. Ask checkpoint: "Are we done with Planning Phase?"
 
-**Record**:
-```
+Record:
+```text
+Planning tracks run:
+- Conventional: [summary]
+- Unorthodox/Risky: [summary]
+
+Winner selected:
+- [which track won and why]
+
 Approved Plan:
-[Paste or summarize the AI's plan]
-
+[Paste or summarize the AI plan]
 ```
 
 ---
 
 ### Step 4: Implementation Phase
 
-**Purpose**: AI generates code; you integrate it into the project.
+Purpose: Generate code and integrate it into the project.
 
-**Procedure**:
-1. Ask the AI to gen erate the implementation (scripts, prefab setup instructions).
+Procedure:
+1. Ask the AI to generate implementation code and Unity setup instructions.
 2. Create/copy files into the Unity project as instructed.
-3. Perform any manual setup in Unity (adding components to GameObjects, creating UI, etc.) as the AI directs.
+3. Perform any manual Unity setup steps.
 4. Document:
    - Files created
-   - Any integration steps you had to figure out yourself
-   - Any errors on first compile
-5. **Start the timer** when you first receive code; **stop the timer** when the solution works in Play mode (or when you abandon the run).
+   - Integration steps you had to infer
+   - Compile errors on first attempt
+5. Timing rule:
+   - Start timer when first code is received.
+   - Stop timer when the solution works in Play mode, or when the run is abandoned.
+6. Ask checkpoint: "Are we done with Implementation Phase?"
 
-**Record**:
-```
+Record:
+```text
 Files generated:
 - [Script 1]
 - [Script 2]
-...
 
 Integration steps taken:
 - [Step 1]
 - [Step 2]
-...
 
 Compile errors on first attempt: [Yes/No - describe if yes]
 ```
@@ -125,62 +153,63 @@ Compile errors on first attempt: [Yes/No - describe if yes]
 
 ### Step 5: Testing Phase
 
-**Purpose**: Verify functionality and count iterations to fix issues.
+Purpose: Verify requirements and measure fix iterations.
 
-**Procedure**:
+Procedure:
 1. Enter Play mode in Unity.
-2. Analyze the benchmark spec and test every functional requirement:
-   - [ ] Requirement 1: [describe test and expected outcome]
-   - [ ] Requirement 2: [describe test and expected outcome]
-   - [ ] Requirement 3: [describe test and expected outcome]
-   - [ ] Requirement 4: [describe test and expected outcome]
-   - [ ] Requirement 5: [describe test and expected outcome]
-3. Perform a quick project scan to ensure functionality is covered end-to-end:
-   - [ ] Core gameplay/system behavior works as specified
-   - [ ] UI/UX updates correctly (if applicable)
-   - [ ] Audio/FX triggers correctly (if applicable)
-   - [ ] No console errors or warnings during Play mode
-4. Document any bugs, missing features, or crashes.
-5. If issues exist, return to the AI with a bug report. Count each fix cycle as one **iteration**.
-6. Repeat until all requirements pass or you reach a stopping point (e.g., max 5 iterations).
+2. Test every functional requirement against the benchmark spec.
+3. Perform quick end-to-end checks:
+   - Core gameplay/system behavior matches spec
+   - UI/UX updates correctly (if applicable)
+   - Audio/FX triggers correctly (if applicable)
+   - No console errors/warnings in Play mode
+4. Document bugs, missing features, and crashes.
+5. If issues exist, return to AI with a bug report. Count each bug-fix loop as one iteration.
+6. Repeat until all requirements pass or stopping criteria are reached (for example, max 5 iterations).
+7. Ask checkpoint: "Are we done with Testing Phase?"
 
-**Record**:
-```
+Record:
+```text
 Iterations to fix: [number]
 
 Issues found:
 1. [Issue] - Fixed in iteration [N]
 2. [Issue] - Not fixed / Workaround: [description]
-...
 ```
 
 ---
 
 ### Step 6: Evaluation Phase
 
-**Purpose**: Apply the scoring rubric and document findings.
+Purpose: Apply rubric scoring and capture findings.
 
-**Procedure**:
-1. Review the generated code against the rubric (see `RUBRIC.md`).
-2. Score each category.
-3. Fill in the results log (see `RESULTS_LOG.md` or `results_log.csv`).
+Procedure:
+1. Review generated code against `RUBRIC.md`.
+2. Score each rubric category.
+3. Fill in results log (`RESULTS_LOG.md` or `results_log.csv`).
 4. Add notes on:
    - Unity-specific issues encountered
    - Notable patterns (good or bad)
-   - Comparison to other AI tools (if you have prior runs)
+   - Comparison to other AI tools (if prior runs exist)
+5. Ask checkpoint: "Are we done with Evaluation Phase?"
 
-**Record**: Complete the results log entry for this run.
+Record: Complete the results log entry for this run.
+
+---
+
+## Deviation Handling
+
+If workflow deviation is detected, use:
+- "This deviates from WORKFLOW.md. Recommended correction: <specific correction>. Do you want to return to the workflow step now?"
+
+If you intentionally continue with a deviation, document it in the results log. Deviations reduce comparability across runs.
 
 ---
 
 ## Post-Run
 
-- Save a copy of the generated code (or tag the project state) for reference.
-- Take screenshots of the working solution for the prototype summary.
-- Reset the project to baseline before the next AI test run.
+- Save generated code (or tag project state) for reference.
+- Take screenshots of the working solution for prototype summaries.
+- Reset project to baseline before the next AI test run.
 
----
 
-## Deviations
-
-If you must deviate from this workflow (e.g., different input system, different Unity version), **document the deviation** in the results log. Deviations reduce comparability across runs.
