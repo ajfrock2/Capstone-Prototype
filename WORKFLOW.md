@@ -121,20 +121,29 @@ Approved Plan:
 
 ### Step 4: Implementation Phase
 
-Purpose: Generate code and integrate it into the project.
+Purpose: Generate code, integrate it into the project, and provide manual setup guidance when AI cannot perform all steps.
 
 Procedure:
 1. Ask the AI to generate implementation code and Unity setup instructions.
 2. Create/copy files into the Unity project as instructed.
 3. Perform any manual Unity setup steps.
-4. Document:
+4. If manual/user actions are needed, create a task-specific setup guide markdown:
+   - Preferred location: `Prototype-Of-Capstone/Assets/Scripts/BenchmarkTasks/<TaskName>/SETUP_GUIDE.md`
+   - Include a quick overview of what still needs to be done.
+   - Include direct step-by-step instructions for how to complete those actions.
+5. Hard gate before Step 5:
+   - Do not proceed to Testing if manual/user actions are still required and the setup guide does not exist.
+6. Document:
    - Files created
    - Integration steps you had to infer
    - Compile errors on first attempt
-5. Timing rule:
+   - Setup guide path (if created)
+7. Timing rule:
    - Start timer when first code is received.
    - Stop timer when the solution works in Play mode, or when the run is abandoned.
-6. Ask checkpoint: "Are we done with Implementation Phase?"
+8. End-of-phase handoff reminder:
+   - If manual steps remain, state: "Implementation is complete. Remaining setup steps are specified in the setup guide."
+9. Ask checkpoint: "Are we done with Implementation Phase?"
 
 Record:
 ```text
@@ -147,6 +156,7 @@ Integration steps taken:
 - [Step 2]
 
 Compile errors on first attempt: [Yes/No - describe if yes]
+Setup guide: [path or N/A]
 ```
 
 ---
@@ -211,5 +221,3 @@ If you intentionally continue with a deviation, document it in the results log. 
 - Save generated code (or tag project state) for reference.
 - Take screenshots of the working solution for prototype summaries.
 - Reset project to baseline before the next AI test run.
-
-

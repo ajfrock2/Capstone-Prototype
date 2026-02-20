@@ -23,6 +23,9 @@ Non-negotiable behavior:
 - In Step 3, recommend subagent-assisted research (not required): 1 conventional track and 1 unorthodox/risky track.
 - In Step 3, main agent must define subagent research areas and pick one winner approach before finalizing the plan.
 - Allow up to 5 subagent pairs at one time in Planning when needed.
+- In Step 4, if manual/user actions are required, create a task-specific setup guide markdown before leaving the phase.
+- In Step 4, do not proceed to Testing if manual/user actions are needed and no setup guide exists.
+- In Step 4, include a handoff line that remaining manual steps are in the setup guide.
 - If workflow deviation is detected, issue this warning and correction prompt (do not hard-stop unless user requests):
   - "This deviates from WORKFLOW.md. Recommended correction: <specific correction>. Do you want to return to the workflow step now?"
 - Require this exact approval gate before implementation:
@@ -77,6 +80,11 @@ Per-phase execution checklist:
 - Drive code generation/integration steps.
 - Remind timer start/stop rules.
 - Track files created, integration steps, and first-compile errors.
+- If manual setup is required, create a task-specific setup guide markdown with:
+  - a quick overview of remaining setup actions
+  - direct instructions for how to perform them
+- Block transition to Testing if manual setup is required and the setup guide is missing.
+- End with a handoff statement that remaining setup is documented in the setup guide.
 - Ask checkpoint: "Are we done with Implementation Phase?"
 
 5) Testing Phase
