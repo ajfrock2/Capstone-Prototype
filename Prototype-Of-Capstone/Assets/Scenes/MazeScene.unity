@@ -282,97 +282,187 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::BenchmarkTasks.CircularTiltMaze.CircularMazeBuilder
   buildOnStart: 1
   clearExisting: 1
-  mazeRadius: 5
-  mazeDepth: 0.6
-  stopThickness: 0.1
+  mazeRadius: 20
+  mazeDepth: 1.2
+  stopThickness: 0.2
   addFrontBackStops: 1
   stopMaterial: {fileID: 2100000, guid: 7b93ca22576c65b4f9869b090d2ddeeb, type: 2}
   ringArcs:
-  - name: Outer_A
-    radius: 5
-    startAngleDeg: 20
-    endAngleDeg: 180
-    thickness: 0.25
-    depth: 0.6
-    segmentLength: 0.5
-  - name: Outer_B
-    radius: 5
-    startAngleDeg: 180
-    endAngleDeg: 350
-    thickness: 0.25
-    depth: 0.6
-    segmentLength: 0.5
-  - name: Ring1_A
-    radius: 3.5
-    startAngleDeg: 60
-    endAngleDeg: 180
-    thickness: 0.2
-    depth: 0.5
-    segmentLength: 0.45
-  - name: Ring1_B
-    radius: 3.5
-    startAngleDeg: 180
-    endAngleDeg: 340
-    thickness: 0.2
-    depth: 0.5
-    segmentLength: 0.45
-  - name: Ring2_A
-    radius: 2.2
-    startAngleDeg: 270
+  - name: R1_A
+    radius: 2
+    startAngleDeg: 32
     endAngleDeg: 360
-    thickness: 0.2
-    depth: 0.5
-    segmentLength: 0.4
-  - name: Ring2_B
-    radius: 2.2
+    thickness: 0.7
+    depth: 0.3
+    segmentLength: 0.6
+  - name: R1_B
+    radius: 2
     startAngleDeg: 0
-    endAngleDeg: 230
-    thickness: 0.2
-    depth: 0.5
-    segmentLength: 0.4
-  - name: Ring3_A
-    radius: 1
-    startAngleDeg: 150
+    endAngleDeg: 8
+    thickness: 0.7
+    depth: 0.3
+    segmentLength: 0.6
+  - name: R2_A
+    radius: 4
+    startAngleDeg: 212
     endAngleDeg: 360
-    thickness: 0.2
-    depth: 0.5
-    segmentLength: 0.35
-  - name: Ring3_B
-    radius: 1
+    thickness: 0.7
+    depth: 0.3
+    segmentLength: 0.8
+  - name: R2_B
+    radius: 4
     startAngleDeg: 0
-    endAngleDeg: 110
-    thickness: 0.2
-    depth: 0.5
-    segmentLength: 0.35
+    endAngleDeg: 188
+    thickness: 0.7
+    depth: 0.3
+    segmentLength: 0.8
+  - name: R3_A
+    radius: 6.4
+    startAngleDeg: 82
+    endAngleDeg: 360
+    thickness: 0.7
+    depth: 0.3
+    segmentLength: 1
+  - name: R3_B
+    radius: 6.4
+    startAngleDeg: 0
+    endAngleDeg: 58
+    thickness: 0.7
+    depth: 0.3
+    segmentLength: 1
+  - name: R4_A
+    radius: 9.2
+    startAngleDeg: 262
+    endAngleDeg: 360
+    thickness: 0.7
+    depth: 0.3
+    segmentLength: 1.2
+  - name: R4_B
+    radius: 9.2
+    startAngleDeg: 0
+    endAngleDeg: 238
+    thickness: 0.7
+    depth: 0.3
+    segmentLength: 1.2
+  - name: R5_A
+    radius: 12.4
+    startAngleDeg: 142
+    endAngleDeg: 360
+    thickness: 0.7
+    depth: 0.3
+    segmentLength: 1.4
+  - name: R5_B
+    radius: 12.4
+    startAngleDeg: 0
+    endAngleDeg: 118
+    thickness: 0.7
+    depth: 0.3
+    segmentLength: 1.4
+  - name: R6_A
+    radius: 16
+    startAngleDeg: 312
+    endAngleDeg: 360
+    thickness: 0.7
+    depth: 0.3
+    segmentLength: 1.6
+  - name: R6_B
+    radius: 16
+    startAngleDeg: 0
+    endAngleDeg: 288
+    thickness: 0.7
+    depth: 0.3
+    segmentLength: 1.6
+  - name: R7_A
+    radius: 20
+    startAngleDeg: 124
+    endAngleDeg: 360
+    thickness: 0.7
+    depth: 0.3
+    segmentLength: 1.8
+  - name: R7_B
+    radius: 20
+    startAngleDeg: 0
+    endAngleDeg: 96
+    thickness: 0.7
+    depth: 0.3
+    segmentLength: 1.8
   radialWalls:
-  - name: RW1
-    angleDeg: 60
-    innerRadius: 1
-    outerRadius: 2.2
-    thickness: 0.2
-    depth: 0.5
-  - name: RW2
-    angleDeg: 200
+  - name: Wall_A
+    angleDeg: 220
     innerRadius: 2.2
-    outerRadius: 3.5
-    thickness: 0.2
-    depth: 0.5
-  - name: RW3
+    outerRadius: 3.8
+    thickness: 0.7
+    depth: 0.3
+  - name: Wall_B
+    angleDeg: 350
+    innerRadius: 2.2
+    outerRadius: 3.8
+    thickness: 0.7
+    depth: 0.3
+  - name: Wall_C
+    angleDeg: 40
+    innerRadius: 4.2
+    outerRadius: 6
+    thickness: 0.7
+    depth: 0.3
+  - name: Wall_D
+    angleDeg: 220
+    innerRadius: 4.2
+    outerRadius: 6
+    thickness: 0.7
+    depth: 0.3
+  - name: Wall_E
+    angleDeg: 40
+    innerRadius: 6.6
+    outerRadius: 8.8
+    thickness: 0.7
+    depth: 0.3
+  - name: Wall_F
     angleDeg: 300
-    innerRadius: 3.5
-    outerRadius: 5
-    thickness: 0.2
-    depth: 0.6
-  - name: RW4
+    innerRadius: 6.6
+    outerRadius: 8.8
+    thickness: 0.7
+    depth: 0.3
+  - name: Wall_G
     angleDeg: 100
-    innerRadius: 3.5
-    outerRadius: 5
-    thickness: 0.2
-    depth: 0.6
-  exitTrigger: {fileID: 419798510}
-  exitAngleDeg: 5
-  exitRadius: 5
-  exitTriggerSize: {x: 0.6, y: 0.6, z: 0.6}
+    innerRadius: 9.6
+    outerRadius: 12
+    thickness: 0.7
+    depth: 0.3
+  - name: Wall_H
+    angleDeg: 280
+    innerRadius: 9.6
+    outerRadius: 12
+    thickness: 0.7
+    depth: 0.3
+  - name: Wall_I
+    angleDeg: 90
+    innerRadius: 12.4
+    outerRadius: 16
+    thickness: 0.7
+    depth: 0.3
+  - name: Wall_J
+    angleDeg: 340
+    innerRadius: 12.4
+    outerRadius: 16
+    thickness: 0.7
+    depth: 0.3
+  - name: Wall_K
+    angleDeg: 80
+    innerRadius: 16.4
+    outerRadius: 20
+    thickness: 0.7
+    depth: 0.3
+  - name: Wall_L
+    angleDeg: 320
+    innerRadius: 16.4
+    outerRadius: 20
+    thickness: 0.7
+    depth: 0.3
+  exitTrigger: {fileID: 0}
+  exitAngleDeg: 110
+  exitRadius: 20
+  exitTriggerSize: {x: 2, y: 0.7, z: 0.6}
 --- !u!1 &1085986081
 GameObject:
   m_ObjectHideFlags: 0
@@ -822,7 +912,7 @@ Transform:
   m_GameObject: {fileID: 1930135682}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -9.129}
+  m_LocalPosition: {x: 0, y: 1, z: -36.18}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -905,7 +995,7 @@ MonoBehaviour:
   spawnOnStart: 1
   ballPrefab: {fileID: 0}
   startLocalPosition: {x: -0.46, y: 0.25, z: 0}
-  ballRadius: 0.2
+  ballRadius: 0.1
   ballMass: 1
   ballDrag: 0.05
   ballAngularDrag: 0.05
